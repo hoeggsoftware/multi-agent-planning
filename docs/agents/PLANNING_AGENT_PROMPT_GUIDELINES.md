@@ -106,7 +106,7 @@ The shape of all five is the same: success criteria specify *what evidence the e
 
 #### For prompts referencing cross-repo content
 
-When the prompt references content in a different repository than the engineer's working tree — typically umbrella canonical files referenced from a tenant repo, or peer-tenant references — name the cross-repo content with full repository qualification (e.g., `rhoegg/agentic-planning/docs/principles/<name>.md`) and let the engineer choose the tool used to read it. Do not prescribe GitHub MCP, `gh` CLI, browser fetch, or any other specific tool.
+When the prompt references content in a different repository than the engineer's working tree — typically canonical files referenced from a tenant repo to an operator umbrella or to public canonical, or peer-tenant references — name the cross-repo content with full repository qualification (e.g., `<owner>/<repo>/docs/principles/<name>.md`) and let the engineer choose the tool used to read it. Do not prescribe GitHub MCP, `gh` CLI, browser fetch, or any other specific tool.
 
 The WHAT is the path. The HOW is the engineer's choice based on what works in their environment.
 
@@ -272,7 +272,7 @@ Planning agents writing engineer prompts should anticipate which documentation w
 
 Planning agents may revise both:
 - These planning agent guidelines (`PLANNING_AGENT_PROMPT_GUIDELINES.md`)
-- Engineer-facing umbrella docs (umbrella `CLAUDE.md`, component docs)
+- Engineer-facing repository docs (the repo's `CLAUDE.md`, component docs)
 
 Engineer agents work within the guidelines but do not edit planning agent guidelines. If an engineer discovers a gap or issue in these guidelines, they should note it in their completion report for the planning agent to address.
 

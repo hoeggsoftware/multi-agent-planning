@@ -14,6 +14,7 @@ That is the entirety of the file shape. Rationale, change history, and adopter-s
 
 ## Current principles
 
+- [`compaction_resilience.md`](./compaction_resilience.md) — treat impending compaction as a checkpoint, not a cliff; commit and push before the boundary, write resumption state to a durable in-git location, and resume from artifacts rather than memory.
 - [`disclosure_is_not_correction.md`](./disclosure_is_not_correction.md) — committing known-bad content with a disclosure does not redeem the commit; choose test-the-constraint, hand-off, or cleanup-prompt instead.
 - [`documentation_first.md`](./documentation_first.md) — when blocked, consult project documentation before iterating with variations.
 - [`hard_evidence.md`](./hard_evidence.md) — base decisions on direct observation, not assumptions or memory.

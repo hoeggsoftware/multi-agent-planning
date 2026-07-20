@@ -170,6 +170,22 @@ problem. Recent academic work on evidence-based agent protocols (requiring citat
 trace-anchored critiques) echoes the spirit of Hard Evidence but stays at the level of runtime protocol
 design.
 
+**Shared Contract AGENTS.md** (Joe Matthews, Oklahoma City; unpublished, shared directly with the
+maintainer; entry added July 2026). A single-file AGENTS.md consisting of a compact values contract —
+pragmatism, helpfulness, curiosity, actionability, monosemy, balance — that both parties to the
+exchange, "the one who prompts and the one who responds," hold each other accountable to, with either
+party empowered to point the other back to the contract when they diverge. Instructive here as a
+contrast specimen: it is a clean example of the values-tier approach to agent contracts, stopping at
+named virtues with no observable artifacts or verification gates, where this project's principles
+deliberately bottom out in checkable state (preconditions blocks, read-back verification, committed
+anchors). Two elements are worth noting rather than adopting wholesale. Its bidirectional-accountability
+framing makes explicit something this model expresses only implicitly through halt-and-surface: the
+prompting layer is bound by the contract too, not only the responding agent. And *monosemy* — one term,
+one meaning, across all artifacts — names a lexical discipline this project practices without naming
+(Origin versus Mode, reference versus adapted are all deliberately disambiguated terms). Neither rises
+to a principle; both are useful vocabulary. As an unpublished artifact it departs from this scan's
+primary-source preference and is recorded for its contrast value, not as citable prior art.
+
 ## 4. Patterns observed
 
 A few meta-observations cut across the sources.
@@ -238,5 +254,6 @@ The two are orthogonal: one is how the bytes reach a machine, the other is how a
 
 ---
 
-*Landscape scan compiled June 2026. Sources reflect the ecosystem at that date and will age; the
-findings are a snapshot, not a maintained index.*
+*Landscape scan compiled June 2026. Individual entries added after compilation are dated inline; the
+scan otherwise reflects the ecosystem at the compilation date and is a snapshot, not a maintained
+index.*

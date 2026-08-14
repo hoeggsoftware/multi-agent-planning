@@ -1,10 +1,33 @@
 # Disclosure Is Not Correction
 
-**Scope**: This principle applies to both planning agents and engineer agents when committing files to the shared git repository. It governs the commit discipline during any workflow phase where content is being added to the canonical git state.
+**Rule:** If you are about to take an action you know to be wrong, incomplete, or destructive relative to what should happen, stop. Disclosing the mistake does not undo it. Everything below is why, and what to do instead.
+
+**Scope**: This principle applies to both planning agents and engineer agents whenever they take an action that changes the state of a system. A transaction here means changing the state of a system, not merely changing database rows; committing files to the shared git repository is one case, alongside sending email, provisioning hardware, and calling destructive infrastructure APIs.
 
 When an agent is about to commit content known to be incomplete, incorrect, or destructive relative to what should be there, **honest disclosure in the commit message does not redeem the commit**. The destructive effect lands on `main` the moment the commit is pushed. A "STOP — DO NOT MERGE" annotation inside the commit body is a sticky note on a fire after it has burned through the wall: visible only to whoever investigates afterward, by which time the damage is already in the chronicle.
 
 This rule is load-bearing because of git-based coordination. Coordination state IS git state. The state model assumes what lands on `main` is what the author intended to land. Intentionally landing wrong content under cover of an apology breaks the assumption that other agents — and future-self — rely on when reading the repo as authoritative.
+
+## On irreversibility
+
+Disclosure cannot correct because some effects cannot be undone. There is no time machine; a confession does not retract what already happened. The trap is treating "I can fix it later" as a license to act now. Some things have no later.
+
+**Known.** You know the harm, and you know it is total:
+
+- You cannot unsend an email.
+- You cannot unbrick a device.
+- You cannot recall a record that is dropped and truly lost with no backup.
+- You cannot un-hard-delete a file.
+
+**Known unknowns.** You know the *kind* of harm; you cannot know its *extent* at the time you act:
+
+- Yes, you can ship a hotfix; no, you cannot reinstall your app on the phone of the user who uninstalled it while your site was down.
+- Yes, you can correct the documentation; no, you cannot reclaim the hours every employee and agent lost while it was wrong.
+- Yes, you can refund the money; no, you cannot give back the time someone spent without access to it.
+
+**Unknown unknowns.** And one-way doors beyond any of these, which you will not see until you are already through them. The absence of a visible irreversible effect is not proof that there is none.
+
+Even seemingly reversible actions on a system's mutable state can carry irreversible consequences. Reversibility of the action does not bound reversibility of its effects, so "it is revertible" is never sufficient license to act-and-disclose.
 
 ## The failure shape
 
@@ -46,4 +69,4 @@ The Hard Evidence Principle says: verify state by direct observation. This rule 
 
 ## Applies to engineers and planning agents both
 
-Both surfaces operate against the same git state and have produced this failure mode in observed sessions. The rule applies to engineer commits and planning agent commits alike. Planning agents writing engineer prompts should ensure the dispatch makes the rule explicit when the engineer's work involves rewriting files that have an extensive prior chronicle.
+Both surfaces operate against the same shared state and have produced this failure mode in observed sessions. The rule applies to every transaction either surface enacts, whether a commit, an email, an infrastructure change, or any other state-changing action, not only to git commits. Planning agents writing engineer prompts should ensure the dispatch makes the rule explicit when the engineer's work involves an irreversible action, or rewriting files that have an extensive prior chronicle.
